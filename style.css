@@ -67,6 +67,11 @@
   max-width: 75%;
 }
 
+.mysteriesTable{
+  margin: auto;
+  border: 2px solid black;
+}
+
 .caption{
   margin-left: 0;
 }
