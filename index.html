@@ -4,27 +4,31 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Catholic Prayer Spot</title>
-        <meta name="Catholic Prayer Spot" content="">
+        <meta name="Catholic Prayer Spot" content="Centralized location for Catholic Prayers">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="/style.css">
+        <link rel="stylesheet" href="/styles/index.css">
     </head>
     <body>
-        <nav>
-            <a href="./about-me.html">About Me</a>
-        </nav>
         <div class="greeting">
-            <h1>Welcome to Catholic Prayer Spot</h1>
+            <h1>Catholic Prayer Spot</h1>
             <h2>A newly created, and still very much in progress, site for all your essential Catholic prayer needs</h2>
         </div>
-        <div class="marianDropdown">
-            <button onclick="dropdownFunction()" class="dropdownButton">Marian Prayers</button>
-            <div id="myDropdown" class="marianDropdownContent">
-              <a href="./prayers/marian/the-holy-rosary.html">The Holy Rosary</a>
-              <a href="./prayers/marian/memorare.html">The Memorare</a>
-              <!-- <a href="#">Saint of the day API fetch</a> -->
+        <div id="prayerBar">
+            <h3>Prayer Categories</h3>
+            <div class="dropdown">
+                <button class="dropdownButton">Marian Prayers</button>
+                <div class="dropdownContent">
+                    <a href="./prayers/marian/the-holy-rosary.html">The Holy Rosary</a>
+                    <a href="./prayers/marian/memorare.html">The Memorare</a>
+                </div>
             </div>
-          </div>
+            <div class="dropdown">
+                <button class="dropdownButton">Daily Prayers and Reflections</button>
+                <div class="dropdownContent">
+                    <a href="">Saint of the Day</a>
+                </div>
+            </div>
+        </div>
     </body>
-    <footer>Last updated: 10/13/2023</footer>
-    <script src="./javascript/index.js" async defer></script>
+    <footer>Last updated: 10/13/2023 <a href="./about-me.html">About Me</a></footer>
 </html>

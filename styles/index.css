@@ -1,0 +1,75 @@
+/* @import "base.css"; */
+/* import is not working, want to use custom variables */
+body{
+    background: url(../images/wooden-planks.jpg) no-repeat center center fixed
+}
+
+.greeting{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 5px solid black;
+    margin-bottom: 5px;
+}
+
+#prayerBar{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    gap: 5px;
+    /* border: 2px solid black; */
+}
+
+#prayerBar h3{
+    margin: auto;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+  }
+
+.dropdownButton {
+    background-color: #43A6C6;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdownContent {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdownContent a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdownContent a:hover {background-color: #43A6C6}
+  
+  .dropdown:hover .dropdownContent, .dropdown:active .dropdownContent{
+    display: block;
+  }
+  
+  .dropdown:hover .dropdownButton {
+    background-color: grey;
+  }
+
+  footer{
+    color: white;
+    position: fixed;
+    bottom: 0;
+  }
