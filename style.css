@@ -50,28 +50,3 @@
   width: 100px;
   border-radius: 25px;
 }
-
-/* THE HOLY ROSARY */
-#rosaryBanner{
-  margin: auto;
-}
-.howToPrayContainer{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  border: 2px solid red;
-}
-
-.howToPrayChild{
-  margin: auto;
-  max-width: 75%;
-}
-
-.mysteriesTable{
-  margin: auto;
-  border: 2px solid black;
-}
-
-.caption{
-  margin-left: 0;
-}

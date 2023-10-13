@@ -1,0 +1,50 @@
+/* THE HOLY ROSARY */
+#rosaryBanner{
+    margin: auto;
+  }
+  .howToPrayContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 2px solid red;
+  }
+  
+  .howToPrayChild{
+    margin: auto;
+    max-width: 75%;
+  }
+  
+  .dropdown{
+    position: relative;
+    display: inline-block;
+    text-decoration-line: underline;
+  }
+  
+  .dropdownContent{
+    display: none;
+    position: absolute;
+    margin: auto;
+    background-color: #43A6C6;
+    min-width: 200px;
+    border-radius: 25px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 0px 10px;
+    z-index: 1;
+  }
+
+  .dropdownContent h4{
+    text-align: center;
+  }
+  
+  .dropdown:hover .dropdownContent, .dropdown:active .dropdownContent{
+    display: block;
+  }
+  
+  .mysteriesTable{
+    margin: auto;
+    border: 2px solid black;
+  }
+  
+  .caption{
+    margin-left: 0;
+  }
