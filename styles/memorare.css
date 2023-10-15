@@ -1,0 +1,10 @@
+.memorareContainer{
+    display: flex;
+}
+
+.memorareChild{
+    flex-direction: column;
+    border: 2px solid black;
+    border-radius: 25px;
+    padding: 0px 10px;
+}
