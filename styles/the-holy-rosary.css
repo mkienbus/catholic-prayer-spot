@@ -18,7 +18,11 @@ body{
 }
 
 .howToPrayChild{
-  margin: auto;
+  background-color: rgba(255, 255, 255, .3);
+  border: 2px solid black;
+  border-radius: 25px;
+  margin: 0 auto 5px auto;
+  padding: 16px;
   max-width: 75%;
 }
 
