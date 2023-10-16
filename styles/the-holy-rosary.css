@@ -1,50 +1,76 @@
 /* THE HOLY ROSARY */
-#rosaryBanner{
-    margin: auto;
-  }
-  .howToPrayContainer{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border: 2px solid black;
-  }
-  
-  .howToPrayChild{
-    margin: auto;
-    max-width: 75%;
-  }
-  
-  .dropdown{
-    position: relative;
-    display: inline-block;
-    text-decoration-line: underline;
-  }
-  
-  .dropdownContent{
-    display: none;
-    position: absolute;
-    margin: auto;
-    background-color: #43A6C6;
-    min-width: 200px;
-    border-radius: 25px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    padding: 0px 10px;
-    z-index: 1;
-  }
+body{
+  background-image: radial-gradient(white, lightblue, #43A6C6);
+}
 
-  .dropdownContent h4{
-    text-align: center;
-  }
-  
-  .dropdown:hover .dropdownContent, .dropdown:active .dropdownContent{
-    display: block;
-  }
-  
-  .mysteriesTable{
-    margin: auto;
-    border: 2px solid black;
-  }
-  
-  .caption{
-    margin-left: 0;
-  }
+#rosaryBanner{
+  text-align: center;
+  border-bottom: 5px solid black;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, .3)
+}
+
+.howToPrayContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.howToPrayChild{
+  margin: auto;
+  max-width: 75%;
+}
+
+.childTitle{
+  text-align: center;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+  text-decoration-line: underline;
+}
+
+.dropdownContent{
+  display: none;
+  position: absolute;
+  margin: auto;
+  background-color: #43A6C6;
+  min-width: 200px;
+  border-radius: 25px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 0px 10px;
+  z-index: 1;
+}
+
+.dropdownContent h4{
+  text-align: center;
+}
+
+.dropdown:hover .dropdownContent, .dropdown:active .dropdownContent{
+  display: block;
+}
+
+#rosaryImg{
+  display: block;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.caption{
+  text-align: center;
+}
+
+.tableHeader{
+  border: 2px solid black;
+}
+
+.mysteriesTable{
+  margin: auto;
+  border: 2px solid black;
+}
+
+.caption{
+  margin-left: 0;
+}
