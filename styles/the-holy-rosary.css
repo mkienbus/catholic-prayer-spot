@@ -7,7 +7,8 @@ body{
   text-align: center;
   border-bottom: 5px solid black;
   margin-bottom: 5px;
-  background-color: rgba(255, 255, 255, .3)
+  background-color: rgba(255, 255, 255, .3);
+  width: 100vw;
 }
 
 .howToPrayContainer{
@@ -23,7 +24,7 @@ body{
   border-radius: 25px;
   margin: 0 auto 5px auto;
   padding: 16px;
-  max-width: 75%;
+  max-width: 500px;
 }
 
 .childTitle{
@@ -56,10 +57,22 @@ body{
   display: block;
 }
 
-#rosaryImg{
-  display: block;
-  margin: auto;
-  border: 2px solid black;
+@media screen and (max-width: 410px){
+  #rosaryImg{
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+    width: 200px;
+    height: 350px;
+  }
+}
+
+@media screen and (min-width: 411px){
+  #rosaryImg{
+    display: block;
+    margin: auto;
+    border: 2px solid black;
+  }
 }
 
 .caption{
