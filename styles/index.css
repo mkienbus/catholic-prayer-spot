@@ -87,3 +87,19 @@ footer{
 #churchCalendar h3{
     color: white;
 }
+
+#liturgicalButton{
+    background-color: #43A6C6;
+    color: white;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+#liturgicalTable{
+    background-color: rgba(255, 255, 255, .3);
+    font-weight: bold;
+}
