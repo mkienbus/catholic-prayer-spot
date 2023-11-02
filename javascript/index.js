@@ -2,7 +2,7 @@
 const tbody = document.getElementById("tbody");
 
 async function liturgicalClick(){
-  document.getElementById("liturgicalButton").onclick=null;
+  console.log("clicked")
   const response = await fetch("http://calapi.inadiutorium.cz/api/v0/en/calendars/default/today");
   const data = await response.json();
   tbody.innerHTML += `<tr>
@@ -11,4 +11,5 @@ async function liturgicalClick(){
         <td>${data.season_week}</td>
         <td>${data.celebrations[0].title}</td>
     </tr>`;
+  document.getElementById("liturgicalButton").onclick=null;
 }
