@@ -28,7 +28,7 @@ body{
     gap: 5px;
 }
 
-#prayerBar h3 {
+#prayerBar h3, #churchInfo h3 {
     margin: auto;
     color: white;
 }

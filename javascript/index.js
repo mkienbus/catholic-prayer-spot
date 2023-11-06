@@ -1,5 +1,5 @@
 function liturgicalClick(){
-  const tbody = document.getElementById("tbody")
+  const tbody = document.getElementById("tbody");
   console.log("clicked");
   fetch("http://calapi.inadiutorium.cz/api/v0/en/calendars/default/today")
     .then(response => response.json())
@@ -9,6 +9,6 @@ function liturgicalClick(){
         <td>${obj.season}</td>
         <td>${obj.season_week}</td>
         <td>${obj.celebrations[0].title}</td>
-      </tr>`))
+      </tr>`));
    document.getElementById("liturgicalButton").onclick=null;
 }
