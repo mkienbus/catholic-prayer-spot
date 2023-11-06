@@ -1,15 +1,14 @@
-const tbody = document.getElementById("tbody");
-
-async function liturgicalClick(){
+function liturgicalClick(){
+  const tbody = document.getElementById("tbody")
   console.log("clicked");
-  const response = await fetch("http://calapi.inadiutorium.cz/api/v0/en/calendars/default/today");
-  const data = await response.json();
-  console.log(data);
-  tbody.innerHTML += `<tr>
-        <td>${data.date}</td>
-        <td>${data.season}</td>
-        <td>${data.season_week}</td>
-        <td>${data.celebrations[0].title}</td>
-    </tr>`;
-  // document.getElementById("liturgicalButton").onclick=null;
+  fetch("http://calapi.inadiutorium.cz/api/v0/en/calendars/default/today")
+    .then(response => response.json())
+    .then(obj => (tbody.innerHTML += 
+      `<tr>
+        <td>${obj.date}</td>
+        <td>${obj.season}</td>
+        <td>${obj.season_week}</td>
+        <td>${obj.celebrations[0].title}</td>
+      </tr>`))
+   document.getElementById("liturgicalButton").onclick=null;
 }
