@@ -1,0 +1,29 @@
+html, body {
+  height: 100%;
+}
+body {
+  background-image: radial-gradient(white, lightblue, #43A6C6);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#matrimonyBanner{
+  text-align: center;
+  border-bottom: 5px solid black;
+  margin-bottom: 5px;
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.matrimonyContainer{
+  display: flex;
+}
+
+.matrimonyChild{
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, .3);
+  border: 2px solid black;
+  border-radius: 25px;
+  padding: 0px 10px;
+  margin: auto;
+  max-width: 500px;
+}

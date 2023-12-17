@@ -20,6 +20,10 @@ body{
     justify-content: space-between;
 }
 
+#churchCalendar h3, #churchInfo h3{
+    color: white;
+}
+
 /* Prayer Bar */
 #prayerBar {
     display: flex;
@@ -84,10 +88,6 @@ footer{
 }
 
 /*Church Liturgical Calendar*/
-#churchCalendar h3{
-    color: white;
-}
-
 #liturgicalButton{
     background-color: #43A6C6;
     color: white;
