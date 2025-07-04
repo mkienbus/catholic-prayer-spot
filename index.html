@@ -1,68 +1,126 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Catholic Prayer Spot</title>
-        <meta name="Catholic Prayer Spot" content="Centralized location for Catholic Prayers">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- SEO and Performance Meta Tags -->
+        <title>Catholic Prayer Spot - Essential Catholic Prayers</title>
+        <meta name="description" content="Centralized location for Catholic Prayers including the Holy Rosary, Memorare, and information about the Sacraments">
+        <meta name="keywords" content="Catholic prayers, Holy Rosary, Memorare, Sacraments, Catholic faith, prayer resources">
+        <meta name="author" content="Catholic Prayer Spot">
+        
+        <!-- Performance Optimization -->
+        <meta name="theme-color" content="#43A6C6">
+        <link rel="preconnect" href="https://calapi.inadiutorium.cz">
+        <link rel="dns-prefetch" href="//www.catholic.org">
+        
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="/styles/index.css">
+        <link rel="preload" href="/images/wooden-planks.jpg" as="image">
+        
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
-        <div class="greeting">
+        <header class="greeting">
             <h1>Catholic Prayer Spot</h1>
-            <h2>A newly created, and still very much in progress, site for all your essential Catholic prayer needs</h2>
-        </div>
-        <div id="indexContentContainer">
-            <div id="prayerBar">
-                <h3>Prayer Categories</h3>
-                <div class="dropdown">
-                    <button class="dropdownButton">Marian Prayers</button>
-                    <div class="dropdownContent">
-                        <a target="_blank" href="./prayers/marian/the-holy-rosary.html">The Holy Rosary</a>
-                        <a target="_blank" href="./prayers/marian/memorare.html">The Memorare</a>
+            <p>A newly created, and still very much in progress, site for all your essential Catholic prayer needs</p>
+        </header>
+        
+        <main id="indexContentContainer">
+            <section id="prayerBar">
+                <h2>Prayer Categories</h2>
+                <nav class="dropdown">
+                    <button class="dropdownButton" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-pray"></i> Marian Prayers
+                    </button>
+                    <div class="dropdownContent" role="menu">
+                        <a href="./prayers/marian/the-holy-rosary.html" target="_blank" role="menuitem">
+                            <i class="fas fa-rosary"></i> The Holy Rosary
+                        </a>
+                        <a href="./prayers/marian/memorare.html" target="_blank" role="menuitem">
+                            <i class="fas fa-heart"></i> The Memorare
+                        </a>
                     </div>
-                </div>
-                <div class="dropdown">
-                    <button class="dropdownButton">Daily Prayers and Reflections</button>
-                    <div class="dropdownContent">
-                        <a target="_blank" href="https://www.catholic.org/saints/sofd.php">Saint of the Day</a>
+                </nav>
+                <nav class="dropdown">
+                    <button class="dropdownButton" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-calendar-day"></i> Daily Prayers and Reflections
+                    </button>
+                    <div class="dropdownContent" role="menu">
+                        <a href="https://www.catholic.org/saints/sofd.php" target="_blank" role="menuitem">
+                            <i class="fas fa-user-circle"></i> Saint of the Day
+                        </a>
                     </div>
-                </div>
-            </div>
-            <div id = churchInfo>
-                <h3>Information about the Church</h3>
-                <div class="dropdown">
-                    <button class="dropdownButton">The Sacraments</button>
-                    <div class="dropdownContent">
-                        <a target="_blank" href="/church-info/baptism.html">Baptism</a>
-                        <a target="_blank" href="/church-info/reconciliation.html">Reconciliation</a>
-                        <a target="_blank" href="/church-info/confirmation.html">Confirmation</a>
-                        <a target="_blank" href="/church-info/eucharist.html">Eucharist</a>
-                        <a target="_blank" href="/church-info/matrimony.html">Matrimony</a>
-                        <a target="_blank" href="/church-info/holy-orders.html">Holy Orders</a>
-                        <a target="_blank" href="/church-info/anointing-of-the-sick.html">Anointing of the Sick</a>
+                </nav>
+            </section>
+            
+            <section id="churchInfo">
+                <h2>Information about the Church</h2>
+                <nav class="dropdown">
+                    <button class="dropdownButton" aria-haspopup="true" aria-expanded="false">
+                        <i class="fas fa-cross"></i> The Sacraments
+                    </button>
+                    <div class="dropdownContent" role="menu">
+                        <a href="/church-info/baptism.html" target="_blank" role="menuitem">
+                            <i class="fas fa-water"></i> Baptism
+                        </a>
+                        <a href="/church-info/reconciliation.html" target="_blank" role="menuitem">
+                            <i class="fas fa-hands-praying"></i> Reconciliation
+                        </a>
+                        <a href="/church-info/confirmation.html" target="_blank" role="menuitem">
+                            <i class="fas fa-dove"></i> Confirmation
+                        </a>
+                        <a href="/church-info/eucharist.html" target="_blank" role="menuitem">
+                            <i class="fas fa-bread-slice"></i> Eucharist
+                        </a>
+                        <a href="/church-info/matrimony.html" target="_blank" role="menuitem">
+                            <i class="fas fa-ring"></i> Matrimony
+                        </a>
+                        <a href="/church-info/holy-orders.html" target="_blank" role="menuitem">
+                            <i class="fas fa-user-priest"></i> Holy Orders
+                        </a>
+                        <a href="/church-info/anointing-of-the-sick.html" target="_blank" role="menuitem">
+                            <i class="fas fa-hand-holding-heart"></i> Anointing of the Sick
+                        </a>
                     </div>
+                </nav>
+            </section>
+            
+            <!-- Enhanced Liturgical Calendar Section -->
+            <section id="churchCalendar" style="display: none;">
+                <h2>Today in the Liturgical Year</h2>
+                <button id="liturgicalButton" type="button">
+                    <i class="fas fa-calendar-alt"></i> Load Liturgical Calendar
+                </button>
+                <div class="table-container">
+                    <table id="liturgicalTable">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Season</th>
+                                <th>Season Week</th>
+                                <th>Celebration</th>
+                            </tr>
+                        </thead>
+                        <tbody id="tbody">
+                            <!-- Data will be populated by JavaScript -->
+                        </tbody>
+                    </table>
                 </div>
-            </div>
-            <!-- only works when run locally for some reason -->
-            <!-- <div id="churchCalendar">
-                <h3>Today in the Liturgical Year</h3>
-                <button id="liturgicalButton" onclick="liturgicalClick()">Click to get info (in progress function)</button>
-                <table id="liturgicalTable" rules="all">
-                    <tr>
-                        <th>Date</th>
-                        <th>Season</th>
-                        <th>Season Week</th>
-                        <th>Celebration</th>
-                    </tr>
-                    <tbody id = "tbody">
-                        
-                    </tbody>
-                </table>
-            </div> -->
-        </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>
+                Last updated: <time datetime="2023-12-17">12/17/2023</time> | 
+                <a href="./about-me.html"><i class="fas fa-user"></i> About Me</a>
+            </p>
+        </footer>
+        
+        <!-- JavaScript loaded at bottom for better performance -->
+        <script src="/javascript/index.js" defer></script>
     </body>
-    <footer>Last updated: 12/17/2023 <a href="./about-me.html">About Me</a></footer>
-    <script src="/javascript/index.js"></script>
 </html>

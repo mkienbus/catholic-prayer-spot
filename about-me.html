@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>About Me</title>
-        <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <!-- SEO and Performance Meta Tags -->
+        <title>About Me - Catholic Prayer Spot</title>
+        <meta name="description" content="Learn more about the creator of Catholic Prayer Spot, a web developer passionate about combining faith and technology">
+        <meta name="keywords" content="Catholic Prayer Spot, web developer, Catholic faith, programming, about">
+        <meta name="author" content="Catholic Prayer Spot">
+        
+        <!-- Performance Optimization -->
+        <meta name="theme-color" content="#43A6C6">
+        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+        <link rel="dns-prefetch" href="//github.com">
+        <link rel="dns-prefetch" href="//linkedin.com">
+        
+        <!-- Stylesheets -->
         <link rel="stylesheet" href="/styles/about-me.css">
+        <link rel="preload" href="/images/misty-mountains.jpeg" as="image">
+        
+        <!-- Font Awesome for Icons -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     </head>
     <body>
         <nav>
-            <a href="./index.html">Home</a>
+            <a href="./index.html">
+                <i class="fas fa-home"></i> Home
+            </a>
         </nav>
-        <h2 id="aboutMeBanner">About Me</h2>
-        <div id = "aboutParentContainer">
-            <img id="profilePicture" alt="profile picture" src="./images/Profile cropped-reduced.png">
-            <div class = "aboutContainer">
+        
+        <header>
+            <h1 id="aboutMeBanner">About Me</h1>
+        </header>
+        
+        <main id="aboutParentContainer">
+            <img id="profilePicture" alt="Profile picture of the Catholic Prayer Spot creator" src="./images/Profile cropped-reduced.png" loading="lazy">
+            
+            <section class="aboutContainer">
                 <h2>Background</h2>
                 <p>
                     I am a cradle Catholic who grew up in Colorado. I graduated college in 2014, and have been working in the military/law enforcement fields ever since. I am working on changing careers as a web developer, and I created this site as a fun little side project - bringing my faith and passion for programming together.
                 </p>
-            </div>
-        </div>
+            </section>
+        </main>
+        
+        <footer id="footer">
+            <p>
+                Find me on: 
+                <a target="_blank" href="https://www.github.com/mkienbus" rel="noopener noreferrer">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a> 
+                | 
+                <a target="_blank" href="https://www.linkedin.com/in/michael-kienbusch" rel="noopener noreferrer">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+            </p>
+        </footer>
     </body>
-    <footer id = "footer">
-        Find me on: <a target = "_blank" href = "http://www.github.com/mkienbus">GitHub <i class="fa-brands fa-square-github"></i></a> | <a  target = "_blank" href = "http://www.linkedin.com/in/michael-kienbusch">LinkedIn <i class="fa-brands fa-linkedin"></i></a>
-    </footer>
 </html>
